@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VAAHAN GO</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+     <div>
+         <form method="POST" action ="/result" >
+         
+         <label>Vehicle no.: </label>
+         <input type="text" id="no" name="no">
+         <label>Name:: </label>
+         <input type="text" id="name" name="name">
+
+         <label>bought date: </label>
+         <input type="text" id="date" name="date">
+
+         <br>
+         <button type="submit" id="register" name="register">Register</button>
+
+        </form>
+
+     </div>
+
+     <div>
+         <form method="get" action="/search">
+         <label>Search: </label>
+         <input type="text" id="search" name="search" placeholder="Search no.">
+         <button type="submit" id="search" >SEARCH</button>
+        </form>
+     </div>    
+
+     <table id="table">
+        <thead><th>id</th>
+            <th>vehicle no</th>
+            <th>name</th>
+            <th>buy_date</th></thead>
+        
+<script type="text/javascript" src="index.js"></script>
+
+</body>
+</html>

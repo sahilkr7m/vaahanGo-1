@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>search result</title>
+</head>
+<body>
+    
+
+    <table style="width:50%">
+  <tr>
+    <th>Vehicle_no</th>
+    <th>Registered_Name</th> 
+    <th>Registartion_Date</th>
+    <th>Chassis_no</th>
+    <th>Model_name</th>
+    <th>Pollution Certificate</th>
+  </tr>
+  <tr>
+    <td>{{data.no}}</td>
+    <td>{{data.name}}</td>
+    <td>{{data.date}}</td>
+    <td>{{data.chassis}}</td>
+    <td>{{data.model}}</td>
+    <td>{{data.pollution}}</td>
+    
+    
+  </tr>
+  
+</table>
+
+<form method='get' action='/'>
+<button type='submit'>Go Back to Homepage</button>
+</form>
+
+</body>
+</html>
