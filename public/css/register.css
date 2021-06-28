@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
+.register-left{
+    text-align: center;
+    color: #fff;
+    margin-top: 4%;
+}
+body{
+    
+    background-image: url('../images/website\ image.png');
+    
+    background-repeat: no-repeat;
+    background-position: 93% 8%;
+    
+
+}
+header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    min-height:200px;
+    width: 100%;
+	background-color:#000044;
+  	color:#aaaacc;
+     
+    font-family: 'Comfortaa', cursive;
+    
+    text-align: center;
+    
+}
+
+.form-group {
+    opacity: 0.7;
+    padding: 10px 20px;
+    padding-left: 30px;
+    height: 48px;
+    width: 50%;
+    font-weight: 500;
+    border-radius: 4px;
+    font-size: 14px;
+    line-height: 22px;
+    letter-spacing: 0.5px;
+    outline: none;
+    color:white;
+    background-color:grey;
+    border: none;
+    -webkit-transition: all 200ms linear;
+    transition: all 200ms linear;
+    box-shadow: 0 4px 8px 0 rgba(21,21,21,.2);
+    border: 1px solid black;
+  }
+  .form-group:focus,
+  .form-group:active {
+    border: none;
+    outline: none;
+    box-shadow: 0 4px 8px 0 rgba(21,21,21,.2);
+  }
+  .btnRegister{
+    float: center;
+    
+    bottom: 10vh;
+    border: none;
+    border-radius: 1.5rem;
+    padding: 2%;
+    background: #0062cc;
+    color: #fff;
+    font-weight: 600;
+    width: 10%;
+    cursor: pointer;
+}
+.register-left img {
+    
+    margin-top: 5%;
+    margin-bottom: 5%;
+    width: 20%;
+    -webkit-animation: mover 2s infinite alternate;
+    animation: mover 1s infinite alternate;
+}
+img {
+    vertical-align: middle;
+    border-style: none;
+}
+.register-form{
+    padding: 10%;
+    margin-top: 10%;
+}
+.txt_reg{
+    color: black;
+    opacity: 100%;
+}
+.sidetxt
+{
+    font-family: 'Comfortaa', cursive;
+    font-weight: 1000;
+    font-size: 170%;
+    position: absolute;
+    bottom: -4vh;
+    left: 59vw;
+}
