@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
+
+body{
+    
+    background-image: url('../images/website\ image.png');
+    
+    background-repeat: no-repeat;
+    background-position: 93% 8%;
+    
+
+}
+header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    min-height:200px;
+	background-color:#000044;
+  	color:#aaaacc;
+     
+    font-family: 'Comfortaa', cursive;
+    
+    text-align: center;
+    
+}
+.maintext{
+    align-items: center;
+    margin-left: 10vw;
+    font-size: 55px;
+	line-height: 1;
+}
+
+#btn{
+        position:absolute;
+        top: 40vh;
+        left: 3vw;
+        padding:0.35em 1.2em;
+        border:0.1em solid rgb(0, 0, 0);
+        margin:0 5em 0.3em 0;
+        border-radius:0.12em;
+        box-sizing: border-box;
+        text-decoration:none;
+        text-align:center;
+        transition: all 0.2s;
+        color:black;
+        }
+#btn:hover{
+        color:#000000;
+        background-color:#FFFFFF;
+        }
+@media all and (max-width:30em){
+             #btn{
+            display:block;
+            margin:0.4em auto;
+        }
+    
+}
+#btn2{
+    position:absolute;
+    top: 40vh;
+    left: 65vh;
+    padding:0.35em 1.2em;
+    border:0.1em solid black;
+    margin:0 5em 0.3em 0;
+    border-radius:0.12em;
+    box-sizing: border-box;
+    text-decoration:none;
+   text-align:center;
+   color: black;
+    transition: all 0.2s;
+    }
+#btn2:hover{
+    color:#000000;
+    background-color:#FFFFFF;
+    }
+@media all and (max-width:30em){
+         #btn2{
+        display:block;
+        margin:0.4em auto;
+    }
+}
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(140, 229, 245);
+    color: white;
+    text-align: center;
+  }
+.sidetxt
+{
+    font-family: 'Comfortaa', cursive;
+    font-weight: 1000;
+    font-size: 170%;
+    position: absolute;
+    bottom: 9vh;
+    left: 59vw;
+}
