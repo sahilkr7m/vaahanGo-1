@@ -5,11 +5,14 @@ const path = require('path');
 const router = express.Router();
 
 var app=express();
+
 // app.use(bodyParser.urlencoded({exrended: true}));
 app.use(express.urlencoded({ extended: true }))
-// const staticPath = path.join(__dirname,"../public");
+const staticPath = path.join(__dirname,"/public");
 // app.use(express.static(__dirname + '../public'));
-// app.use(express.static(staticPath));
+app.use(express.static(staticPath));
+
+// app.use(express.static(__dirname + '/public'));
 
 app.set('view engine', 'hbs');
 app.set('views');
@@ -68,13 +71,16 @@ app.post("/result", function (req, res){
 
 
 function getConnection() {
-    return mysql.createConnection({
+     return mysql.createConnection({
       host: 'localhost',
       user: 'root',
+      
       password:'password',
       database: 'vaahango'
+      
     })
   }
+ 
   
  
  
