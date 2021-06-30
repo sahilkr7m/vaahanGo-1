@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    {{!-- <link href="../css/homestyle.css" rel="stylesheet"> --}}
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+   
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VaahanGo</title>
+</head>
+<body>
+    <header class="headerclass">
+        <h1 class="maintext">Welcome to VaahanGo</h1>
+    </header>
+
+    
+     <form method="post" action="/login">
+     
+         <label>Enter name: </label>
+         <input class="textsearch" type="text" id="name" name="name" placeholder="Name" >
+         
+         <label>Enter mobile number: </label>
+         <input class="textsearch" type="text" id="mobile" name="mobile" placeholder="Mobile Number" >
+
+         <label>Enter the username: </label>
+         <input class="textsearch" type="text" id="username" name="username" placeholder="Username" >
+          <label>Enter the password: </label>
+         <input class="textsearch" type="password" id="password" name="password" placeholder="Password" >
+         <label>Enter the login_time: </label>
+         <input class="textsearch" type="password" id="login_time" name="login_time" placeholder="login time" >
+         <button class="btn btn-outline-secondary" type="submit" id="search">SIGN UP</button>
+        </form>
+
+        <br>
+        <br>
+
+          <form method="get" action="/login">
+         <label>Username: </label>
+         <input class="textsearch" type="text" id="enter_username" name="enter_username" placeholder="Enter username" >
+         <label>Password: </label>
+         <input class="textsearch" type="password" id="enter_password" name="enter_password" placeholder="Enter username" >
+         <button class="btn btn-outline-secondary" type="submit" id="search">LOGIN</button>
+        </form>
+    
+     <h3 class="sidetxt">Difference is we carry in our databases , you carry physically</h3>
+     <footer id="main-footer">
+        <p>
+            Copyright &copy; @2021, VaahanGo All Rights Reserved
+        </p>
+    </footer>
+</body>
+</html>

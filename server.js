@@ -26,8 +26,17 @@ app.set('views');
 
 
 app.get('/', function(req, res){
-    res.render("home");
+    res.render("login");
 })
+app.get('/',function(req, res){
+  res.render("login");
+})
+
+app.get('/home', function(req, res){
+  res.render("home");
+})
+
+
 
 app.get('/register',function(req,res){
     res.render('register');
@@ -135,6 +144,32 @@ getConnection().query(queryString, [n1,n2,n3,n4,n5,n6], (err, results, fields) =
    
 })
 
+//insert login
+app.post("/login", function (req, res){
+  console.log("insert working");
+   const n1=req.body.name;
+   const n2=req.body.mobile;
+   const n3=req.body.username;
+   const n4=req.body.password;
+   const n5=req.body.login_time;
+   
+   
+  
+const queryString = "INSERT INTO login  VALUES (?,?,?,?,?)"
+getConnection().query(queryString, [n1,n2,n3,n4,n5], (err, results, fields) => {
+  if (err) {
+    console.log("Failed to insert new user: " + err)
+    res.sendStatus(500)
+    return
+  }
+
+  console.log("Inserted a new User  "); 
+  // res.send("your data is inserted");
+  res.render('login');
+  // res.end()
+})
+   
+})
 
 
 function getConnection() {
@@ -279,6 +314,43 @@ getConnection().query(queryString, (err, results2, fields) => {
   })
 })
 });
+
+//login user
+app.get("/login",function(req,res){
+
+  let uname=(req.query.enter_username).toString();
+  let pass=(req.query.enter_password).toString();
+
+  
+    const queryString = `SELECT * FROM login where username='${uname}' and password='${pass}' ` ;
+getConnection().query(queryString, (err, result, fields) => {
+  if (err) {
+    console.log("Failed to search user: " + err)
+    
+    // res.sendStatus(500)
+    res.write("You dont have an Account on VaahanGo .Please Signup");
+    // return
+  }
+
+  console.log(result); 
+
+  // res.send("your data is searched");
+ 
+  
+  // res.end()
+  res.render("home",
+  {"data":{
+        
+    "name":result[0].name,
+    "number":result[0].mobile_number
+    
+  }
+    });
+})
+});
+
+// SELECT * FROM login where username=(SELECT * FROM login where password=${n1})
+
 //****************************************************************************************************************** */
 app.get("/allusers", (req, res) => {
     const connection = getConnection()
@@ -309,6 +381,19 @@ app.get("/allusers", (req, res) => {
   app.get("/alldrivers", (req, res) => {
     const connection = getConnection()
     const queryString = "SELECT * FROM drivers"
+    connection.query(queryString, (err, rows, fields) => {
+      if (err) {
+        console.log("Failed to query for users: " + err)
+        res.sendStatus(500)
+        return
+      }
+      res.json(rows)
+    })
+  })
+
+  app.get("/alllogins", (req, res) => {
+    const connection = getConnection()
+    const queryString = "SELECT * FROM login"
     connection.query(queryString, (err, rows, fields) => {
       if (err) {
         console.log("Failed to query for users: " + err)
