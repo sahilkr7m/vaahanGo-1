@@ -7,23 +7,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <title>Find Your Vehicle</title>
+    <title>Find driver</title>
 </head>
 <body>
     <header>
-    <h1>Get Your Vehicle details</h1>
+    <h1>See your details here</h1>
     </header>
     <div class="searchform">
-         <form method="get" action="/search">
-         <label>Search 2 wheeler: </label>
-         <input class="textsearch" type="text" id="search" name="search" placeholder="Enter Vehicle Number" >
+         <form method="get" action="/search_driver">
+         <label>Search Driver details:  </label>
+         <input class="textsearch" type="text" id="driver_search" name="driver_search" placeholder="Enter License Number" >
          <button class="btn btn-outline-secondary" type="submit" id="search">SEARCH</button>
         </form>
-        <form method="get" action="/search4">
-         <label>Search 4 wheeler: </label>
-         <input class="textsearch" type="text" id="search4" name="search4" placeholder="Enter Vehicle Number" >
-         <button class="btn btn-outline-secondary" type="submit" id="search4">SEARCH</button>
-        </form>
+        
          
      </div>
       <h3 class="sidetxt">Difference is we carry in our databases , you carry physically</h3> 
