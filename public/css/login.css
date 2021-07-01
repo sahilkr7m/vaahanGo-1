@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
+body {
+    background-image: url('../images/website\ image.png');
+    background-repeat: no-repeat;
+    background-position: 93% 8%;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    min-height: 100px;
+    background-color: #ADEFD1FF;
+    color: black;
+    font-family: 'Comfortaa', cursive;
+    text-align: center;
+}
+
+header h1 {
+    line-height: 2.2;
+}
+
+.wrapper {
+    opacity: 0.9;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 108vh;
+    width: 50%;
+    padding-bottom: 3rem;
+    background-color: #606060FF;
+    border-radius: 8px;
+}
+
+.wrapper label {
+    font-size: 0.9rem;
+    line-height: 2;
+    font-weight: 500;
+    font-family: sans-serif;
+    color: white;
+    text-align: left;
+    font-family: 'Comfortaa', cursive;
+}
+
+.wrapper input {
+    border-radius: 5px;
+}
+
+.right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    background-color: #5B84B1FF;
+}
+
+.form {
+    display: inline-grid;
+    position: absolute;
+    width: 30%;
+    height: 275px;
+    right: 14%;
+    bottom: 24%;
+    background-color: #ADEFD1FF;
+    border-radius: 8px;
+    border: 2px solid black;
+}
+
+#main-footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(140, 229, 245);
+    color: white;
+    text-align: center;
+}
+
+.sidetxt {
+    font-family: 'Comfortaa', cursive;
+    font-weight: 1000;
+    font-size: 170%;
+    position: absolute;
+    bottom: 9vh;
+    left: 59vw;
+}
+
+.newuser {
+    top: 10%;
+    font-family: 'Comfortaa', cursive;
+    font-weight: 200;
+    color: white;
+}
+
+.form input {
+    border-radius: 5px;
+}

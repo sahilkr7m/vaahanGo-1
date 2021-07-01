@@ -3,45 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    {{!-- <link href="../css/homestyle.css" rel="stylesheet"> --}}
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-   
+    <link href="../css/login.css" rel="stylesheet">
+     <!-- Favicons -->
+ 
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VaahanGo</title>
 </head>
 <body>
-    <header class="headerclass">
+    <header id="header" class="">
         <h1 class="maintext">Welcome to VaahanGo</h1>
     </header>
 
-    
-     <form method="post" action="/login">
-     
+   
+     <form class="wrapper" method="post" action="/login">
+        <h2 class="newuser">New User, Sign Up</h2>
          <label>Enter name: </label>
          <input class="textsearch" type="text" id="name" name="name" placeholder="Name" >
-         
          <label>Enter mobile number: </label>
          <input class="textsearch" type="text" id="mobile" name="mobile" placeholder="Mobile Number" >
-
          <label>Enter the username: </label>
          <input class="textsearch" type="text" id="username" name="username" placeholder="Username" >
-          <label>Enter the password: </label>
+        <label>Enter the password: </label>
          <input class="textsearch" type="password" id="password" name="password" placeholder="Password" >
          <label>Enter the login_time: </label>
          <input class="textsearch" type="password" id="login_time" name="login_time" placeholder="login time" >
-         <button class="btn btn-outline-secondary" type="submit" id="search">SIGN UP</button>
+         
+         <br>
+        <button class="btn btn-outline-primary" type="submit" id="search">SIGN UP</button>
+        
         </form>
 
         <br>
         <br>
 
-          <form method="get" action="/login">
+        <form class="form" method="get" action="/login">
+        <h2>Old Users,Login</h2>
          <label>Username: </label>
          <input class="textsearch" type="text" id="enter_username" name="enter_username" placeholder="Enter username" >
          <label>Password: </label>
          <input class="textsearch" type="password" id="enter_password" name="enter_password" placeholder="Enter username" >
-         <button class="btn btn-outline-secondary" type="submit" id="search">LOGIN</button>
+         <br>
+         <button class="btn btn-outline-secondary" type="submit" id="search" >LOGIN</button>
+         <br>
         </form>
     
      <h3 class="sidetxt">Difference is we carry in our databases , you carry physically</h3>
