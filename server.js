@@ -126,10 +126,12 @@ app.post("/driver", function (req, res){
    const n4=req.body.dob;
    const n5=req.body.validity;
    const n6=req.body.type;
+   const n7=req.body.v_no;
+   
    
   
-const queryString = "INSERT INTO drivers  VALUES (?,?,?,?,?,?)"
-getConnection().query(queryString, [n1,n2,n3,n4,n5,n6], (err, results, fields) => {
+const queryString = "INSERT INTO drivers  VALUES (?,?,?,?,?,?,?)"
+getConnection().query(queryString, [n1,n2,n3,n4,n5,n6,n7], (err, results, fields) => {
   if (err) {
     console.log("Failed to insert new user: " + err)
     res.sendStatus(500)
@@ -148,7 +150,7 @@ getConnection().query(queryString, [n1,n2,n3,n4,n5,n6], (err, results, fields) =
 app.post("/login", function (req, res){
   console.log("insert working");
    const n1=req.body.name;
-   const n2=req.body.mobile;
+   const n2=req.body.license;
    const n3=req.body.username;
    const n4=req.body.password;
    const n5=req.body.login_time;
@@ -309,7 +311,8 @@ getConnection().query(queryString, (err, results2, fields) => {
       "license":(results2[0].license_number),
       "DOB":(results2[0].DOB).toDateString(),
       "validity":(results2[0].valid_till).toDateString(),
-      "type":results2[0].vehicle_type
+      "type":results2[0].vehicle_type,
+      "v_no":results2[0].v_no
       }
   })
 })
