@@ -69,9 +69,10 @@ app.post("/result", function (req, res){
      const n4=req.body.chassis;
      const n5=req.body.model;
      const n6=req.body.pollution;
+     const n7=req.body.username;
     
-  const queryString = "INSERT INTO vaahan_users  VALUES (?,?,?,?,?,?)"
-  getConnection().query(queryString, [n1,n2,n3,n4,n5,n6], (err, results, fields) => {
+  const queryString = "INSERT INTO vaahan_users  VALUES (?,?,?,?,?,?,?)"
+  getConnection().query(queryString, [n1,n2,n3,n4,n5,n6,n7], (err, results, fields) => {
     if (err) {
       console.log("Failed to insert new user: " + err)
       res.sendStatus(500)
@@ -98,9 +99,10 @@ app.post("/result4", function (req, res){
    const n6=req.body.pollution;
    const n7=req.body.insurance;
    const n8=req.body.permit;
+   const n9=req.body.username;
   
-const queryString = "INSERT INTO vaahan_users4  VALUES (?,?,?,?,?,?,?,?)"
-getConnection().query(queryString, [n1,n2,n3,n4,n5,n6,n7,n8], (err, results, fields) => {
+const queryString = "INSERT INTO vaahan_users4  VALUES (?,?,?,?,?,?,?,?,?)"
+getConnection().query(queryString, [n1,n2,n3,n4,n5,n6,n7,n8,n9], (err, results, fields) => {
   if (err) {
     console.log("Failed to insert new user: " + err)
     res.sendStatus(500)
@@ -127,11 +129,12 @@ app.post("/driver", function (req, res){
    const n5=req.body.validity;
    const n6=req.body.type;
    const n7=req.body.v_no;
+   const n8=req.body.username;
    
    
   
-const queryString = "INSERT INTO drivers  VALUES (?,?,?,?,?,?,?)"
-getConnection().query(queryString, [n1,n2,n3,n4,n5,n6,n7], (err, results, fields) => {
+const queryString = "INSERT INTO drivers  VALUES (?,?,?,?,?,?,?,?)"
+getConnection().query(queryString, [n1,n2,n3,n4,n5,n6,n7,n8], (err, results, fields) => {
   if (err) {
     console.log("Failed to insert new user: " + err)
     res.sendStatus(500)
@@ -242,7 +245,8 @@ app.get("/search",function(req,res){
         "date":(results[0].regis_date).toDateString(),
         "chassis":results[0].chassis_no,
         "model":results[0].model_name,
-        "pollution":results[0].Pollution_certificate
+        "pollution":results[0].Pollution_certificate,
+        "username":results[0].username
         }
     })
   })
@@ -276,7 +280,8 @@ getConnection().query(queryString, (err, results1, fields) => {
       "model":results1[0].model_name,
       "pollution":results1[0].Pollution_certificate,
       "insurance":results1[0].Insurance_certificate,
-      "permit":results1[0].goods_permit
+      "permit":results1[0].goods_permit,
+      "username":results1[0].username
       }
   })
 })
@@ -312,7 +317,8 @@ getConnection().query(queryString, (err, results2, fields) => {
       "DOB":(results2[0].DOB).toDateString(),
       "validity":(results2[0].valid_till).toDateString(),
       "type":results2[0].vehicle_type,
-      "v_no":results2[0].v_no
+      "v_no":results2[0].v_no,
+      "username":results2[0].username
       }
   })
 })
